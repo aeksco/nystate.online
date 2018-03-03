@@ -1,6 +1,6 @@
 <template>
   <div class="container h-100">
-    <div class="row h-100 align-items-center">
+    <div class="row h-100 align-items-center pb-4">
       <div class="col-lg-12">
 
         <div class="row mb-2 pb-2">
@@ -20,7 +20,7 @@
 
         <div class="row py-3 mb-3">
           <div class="col-lg-10 pr-0">
-            <input type='text' class='form-control' placeholder="City, town, or county in NY state" @input="setFilter($event.target.value)">
+            <input type='text' class='form-control' placeholder="City, Town, or County in NY" @keyup.enter="submitSearch()" @input="setFilter($event.target.value)">
           </div>
           <div class="col-lg-2 pl-0">
             <button type='submit' class='btn btn-primary mx-2 px-1.5' @click="submitSearch()">

@@ -14,17 +14,19 @@
       </div>
 
       <div :class="toggledCss">
-        <div class="row">
+        <div class="card card-body card-nested mt-2 border-dark">
+          <div class="row">
 
-          <div class="col-sm-12 text-capitalize text-truncate">
-            {{result.message}}
+            <div class="col-sm-12 text-capitalize text-truncate">
+              {{result.message}}
+            </div>
+
+            <div class="col-sm-12">
+              <span :class='badgeClass'>Selector: {{result.selector}}</span>
+              <!-- <pre class='bg-dark text-light'>{{result.context}}</pre> -->
+            </div>
+
           </div>
-
-          <div class="col-sm-12">
-            <span :class='badgeClass'>Selector: {{result.selector}}</span>
-            <!-- <pre class='bg-dark text-light'>{{result.context}}</pre> -->
-          </div>
-
         </div>
       </div>
     </div>
@@ -107,5 +109,8 @@ export default {
     .toggled
       opacity: 0
       height: 0
+
+    .card.card-body.card-nested
+      background-color: rgba(0, 0, 0, 0.05)
 
 </style>
