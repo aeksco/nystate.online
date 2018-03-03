@@ -9,6 +9,7 @@
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav class="mr-auto">
+        <b-nav-item href="#/sites">Websites</b-nav-item>
         <b-nav-item href="#/about">About</b-nav-item>
       </b-navbar-nav>
 
@@ -26,3 +27,8 @@ export default {
   name: 'Navbar'
 }
 </script>
+
+<style lang='sass'>
+  nav.navbar
+    border-bottom: 1px solid #f3f3f3
+</style>
