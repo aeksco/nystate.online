@@ -8,7 +8,7 @@
             <!-- <img class='logo' src="@/assets/logo.png"> -->
 
             <h1>
-              <strong>NYState</strong>Online
+              <strong>NYState.</strong>Online
             </h1>
 
             <p class="lead">
@@ -18,10 +18,12 @@
           </div>
         </div>
 
-        <div class="row py-3">
-          <div class="col-lg-12 text-center input-group mb-3">
+        <div class="row py-3 mb-3">
+          <div class="col-lg-10 pr-0">
             <!-- <input type='text' class='form-control' placeholder="City in NY state" v-on:input='city_autofill'> -->
             <input type='text' class='form-control' placeholder="City in NY state">
+          </div>
+          <div class="col-lg-2 pl-0">
             <button type='submit' class='btn btn-primary mx-2 px-1.5' @click="submitSearch()">
               <i class="fa fa-fw fa-search mr-2"></i>
               Search

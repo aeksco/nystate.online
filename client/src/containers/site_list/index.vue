@@ -1,14 +1,36 @@
 <template>
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-12">
 
-        <Search :module="'municipality'" />
-
-      <div class="row">
-        <SiteChild :site="each" v-for="each in collection" :key="each.swis_code" v-if="collection[0]" />
+      <div class="col-sm-12">
+        <h3>NY State Websites</h3>
       </div>
 
+      <div class="col-sm-12">
+        <hr class='border-light'>
+      </div>
+
+      <div class="col-sm-12">
+        <Search :module="'municipality'" />
+      </div>
+
+      <div class="col-sm-12">
+        <table class="table">
+          <thead>
+            <th>Name</th>
+            <th class='text-center'>Website</th>
+            <th class='text-center'>Type</th>
+            <th class='text-center'>Errors</th>
+            <th class='text-center'>Warnings</th>
+            <th class='text-center'>Notices</th>
+          </thead>
+          <tbody>
+            <SiteChild :site="each" v-for="each in collection" :key="each.swis_code" v-if="collection[0]" />
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-sm-12">
         <ul class='list-group'>
           <li class='list-group-item list-group-item-warning text-center' v-if="!collection[0]">
             <p class="lead mb-0">
@@ -17,8 +39,8 @@
             </p>
           </li>
         </ul>
-
       </div>
+
     </div>
   </div>
 </template>
