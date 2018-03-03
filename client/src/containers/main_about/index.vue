@@ -11,7 +11,7 @@
           </small>
         </h3>
 
-        <hr>
+        <hr class='border-light'>
 
         <p class="lead">
           NYState.online is a website to asssess the accessibility standards of state, county, and town websites in NY State.
