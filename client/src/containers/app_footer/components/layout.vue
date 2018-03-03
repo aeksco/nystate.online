@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer bg-dark text-light">
-    <div class="container-fluid text-center border-top">
+  <footer class="footer">
+    <div class="container-fluid bg-dark text-light text-center border-top">
 
       Built with
       <i class="fa fa-heart ml-1 text-danger"></i>
@@ -19,8 +19,8 @@ export default {}
 
 <style lang="sass">
   footer.footer
-    position: absolute
-    bottom: 0
+    position: fixed
     width: 100%
+    bottom: 0
     line-height: 60px
 </style>

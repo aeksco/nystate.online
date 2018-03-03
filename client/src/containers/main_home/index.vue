@@ -18,20 +18,10 @@
           </div>
         </div>
 
-        <div class='row'>
-          <div class='col-lg-12'>
-            <ul class='list-group'>
-              <li class='list-group-item' v-for="each in results" :key="each._id">
-                {{ each.facility }}
-                <!-- <pre class='text-light bg-dark'>{{ each.inspections.length }}</pre> -->
-              </li>
-            </ul>
-          </div>
-        </div>
-
         <div class="row py-3">
           <div class="col-lg-12 text-center input-group mb-3">
-            <input type='text' class='form-control' placeholder="City in NY state" v-on:input='city_autofill'>
+            <!-- <input type='text' class='form-control' placeholder="City in NY state" v-on:input='city_autofill'> -->
+            <input type='text' class='form-control' placeholder="City in NY state">
             <button type='submit' class='btn btn-primary mx-2 px-1.5' @click="submitSearch()">
               <i class="fa fa-fw fa-search mr-2"></i>
               Search
@@ -48,23 +38,26 @@
 <!-- // // // //  -->
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'main_home',
   metaInfo: {
     title: 'Home'
   },
+  created () {
+    return this.fetch()
+  },
   data () {
     return {
-      queryString: '',
-      results: []
+      queryString: ''
     }
   },
-  methods: {
-    submitSearch () {
-    },
-    city_autofill () {
-    }
-  }
+  methods: mapActions({
+    fetch: 'municipality/fetchCollection'
+  }),
+  computed: mapGetters({
+    collection: 'municipality/collection'
+  })
 }
 </script>
