@@ -1,4 +1,4 @@
-
+7
 <template>
   <div id="app">
     <AppNavbar/>
@@ -46,6 +46,6 @@ export default {
     width: 100%
 
     .container, .contianer-fluid
-      padding-top: 4rem
+      padding-top: 4.5rem
 
 </style>

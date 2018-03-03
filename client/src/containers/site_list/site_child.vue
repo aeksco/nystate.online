@@ -1,35 +1,37 @@
 <template>
-  <li class='list-group-item'>
-    <div class="row">
-      <div class="col-lg-3">
-        <a :href="'#/sites/' + site.swis_code">{{ displayName }}</a>
-        {{ site.type }}
-      </div>
+  <div class="col-sm-12">
+    <div class='card card-body bg-dark text-light border-light mb-2'>
+      <div class="row">
+        <div class="col-lg-6">
+          <a :href="'#/sites/' + site.swis_code">{{ displayName }}</a>
+        </div>
 
-      <div class="col-lg-6">
-        <strong>Type:</strong> {{ site.type }}
-      </div>
 
-      <div class="col-lg-3 text-right">
+        <div class="col-lg-6 text-right">
 
-        <!-- <i class="fa fa-fw fa-check-circle-o fa-lg"></i> -->
-        <span class="badge badge-warning">
-          <i class="fa fa-fw fa-warning"></i>
-          Issues:
-          {{ site.data.report_data.results.length }}
-        </span>
-
-        <a :href="site.website" target="_blank">
-          <span class="badge badge-primary">
-            <i class="fa fa-fw fa-home"></i>
-            Website
+          <span class="badge px-2 py-2 badge-light">
+            <i class="fa fa-fw fa-building"></i>
+            {{ site.type }}
           </span>
-        </a>
+          <!-- <i class="fa fa-fw fa-check-circle-o fa-lg"></i> -->
+          <span class="badge px-2 py-2 badge-warning">
+            <i class="fa fa-fw fa-warning"></i>
+            Issues:
+            {{ site.data.report_data.results.length }}
+          </span>
 
+          <a :href="site.website" target="_blank">
+            <span class="badge px-2 py-2 badge-primary">
+              <i class="fa fa-fw fa-home"></i>
+              Website
+            </span>
+          </a>
+
+        </div>
       </div>
+      <!-- <pre class='text-light bg-dark'>{{ site }}</pre> -->
     </div>
-    <!-- <pre class='text-light bg-dark'>{{ site }}</pre> -->
-  </li>
+  </div>
 </template>
 
 <!-- // // // //  -->
