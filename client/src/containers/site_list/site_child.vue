@@ -1,7 +1,8 @@
 <template>
   <tr>
     <td>
-      <a :href="'#/sites/' + site.swis_code">{{ displayName }}</a>
+      <!-- <a :href="'#/sites/' + site.swis_code">{{ displayName }}</a> -->
+      <a :href="site.website" target="_blank">{{ displayName }}</a>
     </td>
 
     <td>
