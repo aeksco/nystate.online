@@ -22,5 +22,5 @@ export default {}
     position: fixed
     width: 100%
     bottom: 0
-    line-height: 60px
+    line-height: 2rem
 </style>

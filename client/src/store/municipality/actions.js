@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import router from '@/routers'
 let website_data = require('../completeData.json')
 window.data = website_data
 window._ = _
@@ -21,6 +22,10 @@ export default {
     } else {
       commit('orderBy', ORDER_ASC)
     }
+  },
+
+  submitSearch  ({ state, commit, dispatch }) {
+    router.push('/sites')
   },
 
   // module/toggleInactive

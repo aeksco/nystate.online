@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-lg-4">
         <h3>{{ model.municipality }}</h3>
       </div>
 
-      <div class="col-sm-12 col-lg-6 text-lg-right">
+      <div class="col-sm-12 col-lg-8 text-lg-right">
         <span class="badge px-2 py-2 badge-light">
           <i class="fa fa-fw fa-building"></i>
           {{ model.type }}
@@ -18,15 +18,15 @@
         </a>
         <span class="badge px-2 py-2 badge-danger">
           <i class="fa fa-fw fa-times-circle"></i>
-          Errors: {{ stats.errorCount }}
+          {{ stats.errorCount }} Errors
         </span>
         <span class="badge px-2 py-2 badge-warning">
           <i class="fa fa-fw fa-warning mr-2"></i>
-          Warnings: {{ stats.warningCount }}
+          {{ stats.warningCount }} Warnings
         </span>
         <span class="badge px-2 py-2 badge-info">
           <i class="fa fa-fw fa-info-circle"></i>
-          Notices: {{ stats.noticeCount }}
+          {{ stats.noticeCount }} Notices
         </span>
       </div>
 

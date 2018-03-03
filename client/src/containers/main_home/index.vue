@@ -20,8 +20,7 @@
 
         <div class="row py-3 mb-3">
           <div class="col-lg-10 pr-0">
-            <!-- <input type='text' class='form-control' placeholder="City in NY state" v-on:input='city_autofill'> -->
-            <input type='text' class='form-control' placeholder="City in NY state">
+            <input type='text' class='form-control' placeholder="City, town, or county in NY state" @input="setFilter($event.target.value)">
           </div>
           <div class="col-lg-2 pl-0">
             <button type='submit' class='btn btn-primary mx-2 px-1.5' @click="submitSearch()">
@@ -56,7 +55,9 @@ export default {
     }
   },
   methods: mapActions({
-    fetch: 'municipality/fetchCollection'
+    fetch: 'municipality/fetchCollection',
+    setFilter: 'municipality/setFilter',
+    submitSearch: 'municipality/submitSearch'
   }),
   computed: mapGetters({
     collection: 'municipality/collection'
